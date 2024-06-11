@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        body {
+          position: relative;
+          background-color: #f48b26;
+        }
+        div {
+          position: absolute;
+          width: 200px;
+          height: 50px;
+          top: calc(calc(var(--i) * 60px) + 27px);
+          left: calc(calc(var(--i) * 10px) + 27px);
+          background: #feff58;
+        }
+        div::after {
+          content: "";
+          position: absolute;
+          width: calc(120px - calc(var(--i) * 20px));
+          height: 50px;
+          top: 0px;
+          left: 210px;
+          background-color: #feff58;
+        }
+      </style>
+  </head>
+  <body>
+    <div style="--i: 0"></div>
+    <div style="--i: 1"></div>
+    <div style="--i: 2"></div>
+    <div style="--i: 3"></div>
+    
+  </body>
+</html>
